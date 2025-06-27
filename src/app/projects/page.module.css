@@ -1,0 +1,108 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom right, #e0f7fa, #f3e5f5, #e1f5fe);
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ff6ec7, #a67df0, #00d2ff, #fbc2eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffffcc;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+  border-left: 6px solid transparent;
+  backdrop-filter: blur(6px);
+}
+
+/* Neon pastel outlines */
+.card:nth-child(1) { border-left-color: #ffb3c6; }  /* soft rose */
+.card:nth-child(2) { border-left-color: #a1c4fd; }  /* baby blue */
+.card:nth-child(3) { border-left-color: #fbc2eb; }  /* candy pink */
+.card:nth-child(4) { border-left-color: #b5ead7; }  /* mint green */
+.card:nth-child(5) { border-left-color: #fdfd96; }  /* lemon yellow */
+.card:nth-child(6) { border-left-color: #c3bef0; }  /* soft lilac */
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 182, 230, 0.5);
+}
+
+.card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #444;
+  flex-grow: 1;
+  margin-bottom: 12px;
+}
+
+.card a {
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #6a11cb;
+  background: #f1eaff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  align-self: flex-start;
+  transition: background 0.3s;
+}
+
+.card a:hover {
+  background: #e0d4ff;
+}
+
+.backButton {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(to right, #89f7fe, #fbc2eb);
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(255, 110, 199, 0.5);
+  align-self: center;
+}
+
+.backButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #a1c4fd;
+  color: #000;
+}

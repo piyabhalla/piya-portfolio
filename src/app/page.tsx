@@ -1,95 +1,76 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+
+import Image from 'next/image'
+import styles from './page.module.css'
+import { useEffect } from 'react'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const sparkleCount = 20
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    const sparkles = document.querySelectorAll(`.${styles.sparkle}`)
+    sparkles.forEach((sparkle: any) => {
+      sparkle.style.left = `${Math.random() * 100}%`
+      sparkle.style.top = `${Math.random() * 100}%`
+    })
+  }, [])
+
+  return (
+    <div className={styles.wrapper}>
+      <nav className={styles.sidebar}>
+        <div className={styles.logo}>🌟 Piya Bhalla</div>
+        <ul>
+          <li><a href="/skills">Skills</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/resume">Resume</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div className={styles.sparkles}>
+        {Array.from({ length: sparkleCount }).map((_, index) => (
+          <div key={index} className={styles.sparkle}></div>
+        ))}
+      </div>
+
+      <main className={styles.main}>
+        <div className={styles.avatarContainer}>
+          <Image
+            src="/profile.jpg"
+            alt="Piya Bhalla"
+            width={280}
+            height={280}
+            className={styles.avatar}
+          />
         </div>
+
+        <h1 className={styles.heading}>✨ Hi, I'm Piya!</h1>
+        <p className={styles.bio}>
+          A passionate developer exploring full-stack development, AI/ML, and creative coding.  
+          Always building something new — driven by curiosity, creativity, and clean code.
+        </p>
+
+        <div className={styles.badges}>
+          
+        </div>
+
+        <p className={styles.quote}>
+          “Turning ideas into beautiful code.”
+        </p>
+
+        <div className={styles.socials}>
+          <a href="https://github.com/piyabhalla" target="_blank"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/piya-bhalla-b67903336?trk=contact-info" target="_blank"><FaLinkedin /></a>
+          <a href="mailto:piyabhalla000@gmail.com"><FaEnvelope /></a>
+        </div>
+
+        <div className={styles.divider}></div>
+
+        <footer className={styles.footer}>
+          © {new Date().getFullYear()} Piya Bhalla. All rights reserved.
+        </footer>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
-  );
+  )
 }

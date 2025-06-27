@@ -1,0 +1,79 @@
+.main {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffe4ec, #e0f7fa, #e1e0ff);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  text-align: center;
+  color: #333;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #ff6ec7, #a67df0, #00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  color: #444;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(45deg, #ff6ec7, #a67df0);
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2.2rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 0 0 12px rgba(255, 110, 199, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(166, 125, 240, 0.9);
+}
+
+.icon {
+  font-size: 1.4rem;
+}
+
+.backButton {
+  margin-top: 2.5rem;
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(to right, #89f7fe, #fbc2eb);
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(255, 110, 199, 0.5);
+  font-size: 1.05rem;
+}
+
+.backButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #89f7fe;
+  color: #000;
+}

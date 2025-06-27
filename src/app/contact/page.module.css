@@ -1,0 +1,151 @@
+.main {
+min-height: 100vh;
+padding: 4rem 2rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background: linear-gradient(135deg, #ffe6f7, #e0fffc, #e8d3fc);
+background-size: 600% 600%;
+animation: neonFlow 12s ease infinite;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes neonFlow {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+.heading {
+font-size: 3.2rem;
+font-weight: bold;
+background: linear-gradient(90deg, #ff6ec7, #fbc2eb, #89f7fe, #a1c4fd);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-bottom: 2.5rem;
+text-align: center;
+text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.cardGrid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 2.5rem;
+width: 100%;
+max-width: 1200px;
+margin-bottom: 3rem;
+}
+
+.card {
+background: #fff;
+border-radius: 20px;
+padding: 2rem;
+text-align: center;
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+border: 2px solid transparent;
+position: relative;
+z-index: 1;
+}
+
+.card:hover {
+transform: translateY(-10px) scale(1.03);
+box-shadow: 0 0 25px rgba(255, 110, 199, 0.4);
+border-color: #ffb6f1;
+}
+
+.card h2 {
+margin-top: 1.2rem;
+font-size: 1.3rem;
+color: #444;
+}
+
+.card p {
+margin-top: 0.6rem;
+font-size: 1rem;
+color: #666;
+}
+
+.icon {
+font-size: 2.8rem;
+color: #ff6ec7;
+filter: drop-shadow(0 0 6px #ffa9e0);
+}
+
+/* ===== Form Styling ===== */
+.form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+width: 100%;
+max-width: 750px;
+background: rgba(255, 255, 255, 0.8);
+padding: 2.5rem;
+border-radius: 24px;
+box-shadow: 0 0 30px rgba(255, 182, 230, 0.3);
+backdrop-filter: blur(8px);
+border: 2px dashed #ffa9e0;
+}
+
+.formHeading {
+font-size: 2rem;
+font-weight: bold;
+text-align: center;
+margin-bottom: 1rem;
+background: linear-gradient(to right, #ff6ec7, #a6c1ee, #89f7fe);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.form input,
+.form textarea {
+padding: 1rem;
+border: none;
+border-radius: 12px;
+font-size: 1.05rem;
+background: #fff;
+color: #333;
+box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.form input:focus,
+.form textarea:focus {
+outline: none;
+box-shadow: 0 0 0 3px #ffd6f6;
+}
+
+.form button {
+padding: 0.9rem 2.2rem;
+font-size: 1.05rem;
+background: linear-gradient(to right, #ff6ec7, #a1c4fd, #89f7fe);
+color: white;
+border: none;
+border-radius: 12px;
+cursor: pointer;
+box-shadow: 0 0 15px #ffcbf5;
+transition: all 0.3s ease;
+align-self: center;
+}
+
+.form button:hover {
+transform: scale(1.05);
+box-shadow: 0 0 18px #89f7fe;
+}
+.backButton {
+margin-top: 2rem;
+padding: 0.8rem 2rem;
+background: linear-gradient(to right, #89f7fe, #fbc2eb);
+color: #333;
+font-weight: bold;
+text-decoration: none;
+border-radius: 12px;
+transition: all 0.3s ease;
+box-shadow: 0 0 12px rgba(255, 110, 199, 0.5);
+}
+
+.backButton:hover {
+transform: scale(1.05);
+box-shadow: 0 0 20px #89f7fe;
+color: #000;
+}
