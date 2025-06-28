@@ -1,18 +1,20 @@
 .main {
   min-height: 100vh;
-  padding: 2rem 1.2rem;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7, #a1c4fd, #c2e9fb);
+  background-size: 600% 600%;
+  animation: shiftBackground 15s ease infinite;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #ffe4ec, #e0f7fa, #e1e0ff);
-  background-size: 400% 400%;
-  animation: gradientShift 10s ease infinite;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
   text-align: center;
-  color: #333;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-@keyframes gradientShift {
+@keyframes shiftBackground {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
@@ -89,6 +91,7 @@
 
   .description {
     font-size: 1rem;
+    padding: 0 0.5rem;
   }
 
   .button {
@@ -99,5 +102,26 @@
   .backButton {
     font-size: 0.95rem;
     padding: 0.7rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.9rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    padding: 0;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .backButton {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
   }
 }
