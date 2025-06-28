@@ -140,3 +140,19 @@
   font-size: 0.85rem;
   color: #888;
 }
+/* Add at bottom */
+@media (max-width: 1024px) {
+  .wrapper { flex-direction: column; }
+  .sidebar { position: relative; width: 100%; height: auto; border-right: none; box-shadow: none; }
+  .main { margin-left: 0; padding: 2rem 1rem; }
+  .avatar { width: 180px; height: 180px; }
+  .heading { font-size: 2.5rem; }
+  .bio { font-size: 1rem; max-width: 90%; }
+}
+@media (max-width: 480px) {
+  .wrapper { padding: 0; }
+  .avatar { width: 140px; height: 140px; }
+  .heading { font-size: 2rem; }
+  .bio { font-size: 0.9rem; }
+  .socials { font-size: 1.4rem; }
+}

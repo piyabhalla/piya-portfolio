@@ -111,3 +111,24 @@
   box-shadow: 0 0 20px #89f7fe;
   color: #000;
 }
+@media (max-width: 768px) {
+  .cardGrid, .grid {
+    grid-template-columns: 1fr !important;
+  }
+  .form { width: 100% !important; padding: 1rem !important; }
+}
+@media (max-width: 480px) {
+  .heading { font-size: 2rem !important; }
+  .icon { font-size: 2.2rem !important; }
+  .card h2 { font-size: 1.2rem; }
+  .card p { font-size: .9rem; }
+}
+@media (max-width: 768px) {
+  .container, .grid, .row { flex-direction: column !important; width: 100%; }
+  .section { max-width: 100%; }
+}
+@media (max-width: 480px) {
+  .heading { font-size: 2rem !important; }
+  .description { font-size: 1rem !important; }
+  .button, .backButton { font-size: .95rem !important; padding: .8rem 1.6rem !important; }
+}
