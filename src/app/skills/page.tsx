@@ -7,8 +7,7 @@ import {
   FaPython, FaJava, FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaGithub, FaCloud, FaBrain, FaLaptopCode,
 } from 'react-icons/fa';
 import {
-  SiCplusplus, SiHtml5, SiCss3, SiJavascript, SiNextdotjs, SiFirebase, SiTypescript,
-  SiNumpy, SiScikitlearn, SiTensorflow, SiOpencv, SiMysql, SiPostgresql, SiPandas,
+  SiCplusplus, SiHtml5, SiCss3, SiJavascript, SiNextdotjs, SiFirebase, SiTypescript, SiNumpy, SiScikitlearn, SiTensorflow, SiOpencv, SiMysql, SiPostgresql, SiPandas,
 } from 'react-icons/si';
 import { MdOutlineDraw, MdOutlineTipsAndUpdates } from 'react-icons/md';
 import { GiBrain, GiTalk } from 'react-icons/gi';
