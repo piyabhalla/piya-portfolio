@@ -8,7 +8,6 @@
   position: relative;
 }
 
-/* Sidebar */
 .sidebar {
   position: fixed;
   left: 0;
@@ -53,7 +52,6 @@
   text-decoration: none;
 }
 
-/* Sidebar link colors */
 .sidebar li:nth-child(1) a { background: #ffe4e1; color: #ff1493; }
 .sidebar li:nth-child(2) a { background: #e0ffff; color: #00ced1; }
 .sidebar li:nth-child(3) a { background: #f0e68c; color: #b8860b; }
@@ -64,7 +62,6 @@
   box-shadow: 0 0 10px #fff;
 }
 
-/* Main Content */
 .main {
   flex: 1;
   margin-left: 40%;
@@ -157,7 +154,7 @@
   color: #999;
 }
 
-/* Responsive styles */
+/* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
   .wrapper {
     flex-direction: column;
