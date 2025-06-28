@@ -12,12 +12,14 @@ body {
   line-height: 1.5;
 }
 
+/* Prevent horizontal overflow */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Make sure text and layout behave predictably */
 a {
   color: inherit;
   text-decoration: none;
@@ -30,6 +32,7 @@ video {
   display: block;
 }
 
+/* Normalize buttons */
 button {
   font-family: inherit;
   cursor: pointer;
@@ -38,11 +41,22 @@ button {
   background: none;
 }
 
-/* at root of globals.css */
+/* Responsive font sizing */
 @media (max-width: 768px) {
-  html { font-size: 14px; }
+  html {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 480px) {
-  html { font-size: 12px; }
+  html {
+    font-size: 12px;
+  }
+}
+
+/* ✅ NEW: Force root elements to take full width */
+#__next,
+body,
+html {
+  width: 100%;
 }
