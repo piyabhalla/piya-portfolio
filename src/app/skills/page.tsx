@@ -7,7 +7,7 @@ import {
   FaPython, FaJava, FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaGithub, FaCloud, FaBrain, FaLaptopCode,
 } from 'react-icons/fa';
 import {
-  SiCplusplus, SiHtml5, SiCss3, SiJavascript, SiNextdotjs, SiFirebase, SiTypescript, SiCloudinary,
+  SiCplusplus, SiHtml5, SiCss3, SiJavascript, SiNextdotjs, SiFirebase, SiTypescript,
   SiNumpy, SiScikitlearn, SiTensorflow, SiOpencv, SiMysql, SiPostgresql, SiPandas,
 } from 'react-icons/si';
 import { MdOutlineDraw, MdOutlineTipsAndUpdates } from 'react-icons/md';
@@ -37,7 +37,6 @@ const sections = [
       { name: 'Node.js', icon: <FaNodeJs color="#3c873a" /> },
       { name: 'Firebase', icon: <SiFirebase color="#FFCA28" /> },
       { name: 'Firebase Auth', icon: <SiFirebase color="#FFA000" /> },
-      { name: 'Cloudinary', icon: <SiCloudinary color="#3448c5" /> },
     ],
   },
   {
