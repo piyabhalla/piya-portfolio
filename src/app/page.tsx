@@ -28,12 +28,6 @@ export default function Home() {
         </ul>
       </nav>
 
-      <div className={styles.sparkles}>
-        {Array.from({ length: sparkleCount }).map((_, index) => (
-          <div key={index} className={styles.sparkle}></div>
-        ))}
-      </div>
-
       <main className={styles.main}>
         <div className={styles.avatarContainer}>
           <Image
@@ -51,9 +45,7 @@ export default function Home() {
           Always building something new — driven by curiosity, creativity, and clean code.
         </p>
 
-        <div className={styles.badges}>
-          
-        </div>
+        <div className={styles.badges}></div>
 
         <p className={styles.quote}>
           “Turning ideas into beautiful code.”

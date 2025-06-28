@@ -46,10 +46,16 @@ export default function ContactPage() {
         </motion.div>
       </div>
 
-      <motion.form className={styles.form} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={{ duration: 0.6 }} onSubmit={(e) => {
-        e.preventDefault();
-        alert('Message sent! (fake)');
-      }}>
+      <motion.form
+        className={styles.form}
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.6 }}
+        onSubmit={(e) => {
+          e.preventDefault();
+          alert('Message sent! (fake)');
+        }}
+      >
         <h2 className={styles.formHeading}>💌 Drop Me a Message</h2>
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Your Email" required />

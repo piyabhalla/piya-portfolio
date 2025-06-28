@@ -9,59 +9,57 @@ import Link from 'next/link';
 export default function ProjectsPage() {
   const projects = [
     {
-      title: 'AI Water Quality System',
-      description: 'An IoT-AI system using sensors to predict water contamination in real-time.',
-      link: 'https://github.com/piyabhalla/water-quality-monitoring',
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'My personal portfolio website built with Next.js, Firebase, and vibrant aesthetics.',
+      title: 'AI Portfolio Website',
+      description: 'Built a beautiful portfolio with animations, responsive design, and Next.js.',
       link: 'https://github.com/piyabhalla/piya-portfolio',
     },
     {
-      title: 'Creative Ads Engine',
-      description: 'A data-driven creative engine to test hooks, scripts, and boost ad performance.',
-      link: 'https://github.com/piyabhalla/ad-engine',
+      title: 'IoT-AI Water Quality System',
+      description: 'Sensor-integrated ML system for predicting water contamination.',
+      link: '#',
     },
     {
-      title: 'Medical Chatbot',
-      description: 'Smart chatbot trained on BDS queries and dental patient FAQs.',
-      link: 'https://github.com/piyabhalla/medical-chatbot',
+      title: 'Acupuncture Pen Ad',
+      description: 'Creative copy and storyboard for health product marketing.',
+      link: '#',
     },
     {
-      title: 'NLP Resume Parser',
-      description: 'Parses resumes and extracts skills and experience using NLP models.',
-      link: 'https://github.com/piyabhalla/nlp-resume-parser',
+      title: 'Makeup Pen Ad',
+      description: 'Designed a catchy script and visuals for social media promotion.',
+      link: '#',
     },
     {
-      title: 'Facial Emotion Detector',
-      description: 'Detects user emotions in real-time using OpenCV and deep learning.',
-      link: 'https://github.com/piyabhalla/emotion-detector',
+      title: 'Chatbot for College Queries',
+      description: 'Helpful assistant built using NLP for answering academic FAQs.',
+      link: '#',
+    },
+    {
+      title: 'Python Data Dashboard',
+      description: 'Visual analytics tool using pandas, matplotlib, and Streamlit.',
+      link: '#',
     },
   ];
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.heading}>✨ My Projects</h1>
-
+      <h1 className={styles.heading}>🌈 My Projects</h1>
       <div className={styles.grid}>
-        {projects.map((project, index) => (
+        {projects.map((proj, idx) => (
           <motion.div
-            key={index}
+            key={idx}
             className={styles.card}
-            whileInView={{ opacity: 1, scale: 1 }}
-            initial={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{ scale: 1.02 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: idx * 0.1 }}
           >
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              View Project →
-            </a>
+            <h2>{proj.title}</h2>
+            <p>{proj.description}</p>
+            <a href={proj.link} target="_blank">View</a>
           </motion.div>
         ))}
       </div>
-
       <Link href="/" className={styles.backButton}>
         ⬅ Back to Home
       </Link>

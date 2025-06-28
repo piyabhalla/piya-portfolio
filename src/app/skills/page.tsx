@@ -101,7 +101,6 @@ export default function SkillsPage() {
         </div>
       </div>
 
-      {/* Back to Home Button */}
       <Link href="/" className={styles.backButton}>
         ⬅ Back to Home
       </Link>
