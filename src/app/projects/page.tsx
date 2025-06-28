@@ -1,4 +1,7 @@
-import styles from './page.module.css'
+'use client';
+
+import styles from './page.module.css';
+import Link from 'next/link';
 
 const projects = [
   {
@@ -31,12 +34,12 @@ const projects = [
     description: "Predicts car sale prices using ML regression.",
     github: "https://github.com/piyabhalla/Car-Sales-Price-Prediction",
   },
-]
+];
 
 export default function ProjectsPage() {
   return (
     <main className={styles.main}>
-      <h1 className={styles.heading}> 🤖My Projects🤖 </h1>
+      <h1 className={styles.heading}>💖 My Projects 💖</h1>
       <div className={styles.grid}>
         {projects.map((project, index) => (
           <div key={index} className={styles.card}>
@@ -48,6 +51,11 @@ export default function ProjectsPage() {
           </div>
         ))}
       </div>
+
+      {/* ✅ Back to Home Button */}
+      <Link href="/" className={styles.backButton}>
+        ⬅ Back to Home
+      </Link>
     </main>
-  )
+  );
 }
