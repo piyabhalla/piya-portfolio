@@ -1,12 +1,13 @@
 .main {
   min-height: 100vh;
-  padding: 20px;
+  padding: 40px 20px;
   background: linear-gradient(135deg, #ffdde1, #ee9ca7, #a1c4fd, #c2e9fb);
   background-size: 400% 400%;
   animation: shiftBackground 10s ease infinite;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 @keyframes shiftBackground {
@@ -16,13 +17,14 @@
 }
 
 .heading {
-  font-size: 2.2rem;
+  font-size: 3rem;
   font-weight: 900;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background: linear-gradient(to right, #ff6ec7, #f9f871, #00d2ff, #89f7fe, #a67df0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .container {
@@ -30,17 +32,17 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1300px;
   align-items: center;
   justify-content: center;
 }
 
 .row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .section {
@@ -48,18 +50,20 @@
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  width: 100%;
-  max-width: 360px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 370px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .sectionTitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 15px;
   color: #212121;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .grid {
@@ -71,14 +75,14 @@
 
 .card {
   background-color: white;
-  padding: 10px 14px;
-  border-radius: 10px;
+  padding: 12px 16px;
+  border-radius: 12px;
   font-weight: 600;
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.9rem;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   color: #333;
   transition: all 0.2s ease-in-out;
 }
@@ -89,11 +93,11 @@
 }
 
 .icon {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .backButton {
-  margin-top: 30px;
+  margin-top: 40px;
   padding: 0.8rem 2rem;
   background: linear-gradient(to right, #ff6ec7, #a1c4fd);
   color: white;
@@ -109,12 +113,38 @@
   transform: scale(1.05);
   box-shadow: 0 0 25px #a1c4fd;
 }
+
+/* 📱 Mobile Responsive */
 @media (max-width: 768px) {
-  .container, .grid, .row { flex-direction: column !important; width: 100%; }
-  .section { max-width: 100%; }
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .section {
+    max-width: 100%;
+  }
+
+  .card {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
 }
+
 @media (max-width: 480px) {
-  .heading { font-size: 2rem !important; }
-  .description { font-size: 1rem !important; }
-  .button, .backButton { font-size: .95rem !important; padding: .8rem 1.6rem !important; }
+  .heading {
+    font-size: 1.7rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.1rem;
+  }
+
+  .card {
+    font-size: 0.85rem;
+  }
+
+  .backButton {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.4rem;
+  }
 }

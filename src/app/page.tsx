@@ -9,10 +9,10 @@ export default function Home() {
   const sparkleCount = 20
 
   useEffect(() => {
-    const sparkles = document.querySelectorAll(`.${styles.sparkle}`)
+    const sparkles = document.querySelectorAll(.${styles.sparkle})
     sparkles.forEach((sparkle: any) => {
-      sparkle.style.left = `${Math.random() * 100}%`
-      sparkle.style.top = `${Math.random() * 100}%`
+      sparkle.style.left = ${Math.random() * 100}%
+      sparkle.style.top = ${Math.random() * 100}%
     })
   }, [])
 
@@ -28,7 +28,7 @@ export default function Home() {
         </ul>
       </nav>
 
-      <main className={styles.main}>
+      <div className={styles.main}>
         <div className={styles.avatarContainer}>
           <Image
             src="/profile.jpg"
@@ -45,7 +45,9 @@ export default function Home() {
           Always building something new — driven by curiosity, creativity, and clean code.
         </p>
 
-        <div className={styles.badges}></div>
+        <div className={styles.badges}>
+          {/* Optional: add your tech tags here */}
+        </div>
 
         <p className={styles.quote}>
           “Turning ideas into beautiful code.”
@@ -62,7 +64,7 @@ export default function Home() {
         <footer className={styles.footer}>
           © {new Date().getFullYear()} Piya Bhalla. All rights reserved.
         </footer>
-      </main>
+      </div>
     </div>
   )
 }

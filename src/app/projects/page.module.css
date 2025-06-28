@@ -1,109 +1,75 @@
 .main {
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #f8e9ff, #e0f7fa, #fff1d6);
+  background: linear-gradient(135deg, #ffe4ec, #e0f7fa, #e1e0ff);
   background-size: 400% 400%;
-  animation: flowBg 10s ease infinite;
-  font-family: 'Segoe UI', sans-serif;
+  animation: gradientShift 10s ease infinite;
+  text-align: center;
+  color: #333;
 }
 
-@keyframes flowBg {
+@keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
 .heading {
-  font-size: 2.4rem;
+  font-size: 3.5rem;
   font-weight: bold;
-  text-align: center;
   margin-bottom: 2rem;
-  background: linear-gradient(90deg, #ff6ec7, #fbc2eb, #89f7fe, #a1c4fd);
+  background: linear-gradient(to right, #ff6ec7, #a67df0, #00d2ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 960px;
-}
-
-@media (min-width: 640px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.card {
-  background: #ffffffdd;
-  border-radius: 16px;
-  padding: 1.2rem;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border-left: 6px solid #ffb6ff;
-  backdrop-filter: blur(6px);
-}
-
-.card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(255, 182, 230, 0.4);
-}
-
-.card h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #222;
-}
-
-.card p {
-  font-size: 0.95rem;
+.description {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
   color: #444;
 }
 
-.card a {
-  margin-top: auto;
-  background: #f1eaff;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  text-decoration: none;
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(45deg, #ff6ec7, #a67df0);
+  color: white;
   font-weight: bold;
-  font-size: 0.9rem;
-  color: #6a11cb;
-  align-self: flex-start;
-  transition: background 0.3s;
+  padding: 1rem 2.2rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 0 0 12px rgba(255, 110, 199, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
 }
 
-.card a:hover {
-  background: #e0d4ff;
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(166, 125, 240, 0.9);
+}
+
+.icon {
+  font-size: 1.4rem;
 }
 
 .backButton {
-  margin-top: 2rem;
-  padding: 0.8rem 2rem;
+  margin-top: 2.5rem;
+  padding: 0.9rem 2.2rem;
   background: linear-gradient(to right, #89f7fe, #fbc2eb);
   color: #333;
   font-weight: bold;
   text-decoration: none;
   border-radius: 12px;
-  font-size: 1rem;
   transition: all 0.3s ease;
   box-shadow: 0 0 12px rgba(255, 110, 199, 0.5);
+  font-size: 1.05rem;
 }
 
 .backButton:hover {
@@ -111,24 +77,45 @@
   box-shadow: 0 0 20px #89f7fe;
   color: #000;
 }
+
+/* 🌐 Mobile Responsive */
 @media (max-width: 768px) {
-  .cardGrid, .grid {
-    grid-template-columns: 1fr !important;
+  .heading {
+    font-size: 2.2rem;
   }
-  .form { width: 100% !important; padding: 1rem !important; }
+
+  .description {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .backButton {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
 }
+
 @media (max-width: 480px) {
-  .heading { font-size: 2rem !important; }
-  .icon { font-size: 2.2rem !important; }
-  .card h2 { font-size: 1.2rem; }
-  .card p { font-size: .9rem; }
-}
-@media (max-width: 768px) {
-  .container, .grid, .row { flex-direction: column !important; width: 100%; }
-  .section { max-width: 100%; }
-}
-@media (max-width: 480px) {
-  .heading { font-size: 2rem !important; }
-  .description { font-size: 1rem !important; }
-  .button, .backButton { font-size: .95rem !important; padding: .8rem 1.6rem !important; }
+  .heading {
+    font-size: 1.7rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .button {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .backButton {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+  }
 }
