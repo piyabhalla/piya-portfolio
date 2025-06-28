@@ -8,7 +8,7 @@
   flex-direction: column;
   gap: 30px;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .heading {
@@ -26,7 +26,6 @@
   flex: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 25px;
   padding: 0 20px;
 }
@@ -45,13 +44,12 @@
   backdrop-filter: blur(6px);
 }
 
-/* Neon pastel outlines */
-.card:nth-child(1) { border-left-color: #ffb3c6; }  /* soft rose */
-.card:nth-child(2) { border-left-color: #a1c4fd; }  /* baby blue */
-.card:nth-child(3) { border-left-color: #fbc2eb; }  /* candy pink */
-.card:nth-child(4) { border-left-color: #b5ead7; }  /* mint green */
-.card:nth-child(5) { border-left-color: #fdfd96; }  /* lemon yellow */
-.card:nth-child(6) { border-left-color: #c3bef0; }  /* soft lilac */
+.card:nth-child(1) { border-left-color: #ffb3c6; }
+.card:nth-child(2) { border-left-color: #a1c4fd; }
+.card:nth-child(3) { border-left-color: #fbc2eb; }
+.card:nth-child(4) { border-left-color: #b5ead7; }
+.card:nth-child(5) { border-left-color: #fdfd96; }
+.card:nth-child(6) { border-left-color: #c3bef0; }
 
 .card:hover {
   transform: scale(1.03);
@@ -105,4 +103,34 @@
   transform: scale(1.05);
   box-shadow: 0 0 20px #a1c4fd;
   color: #000;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .card p,
+  .card a {
+    font-size: 13px;
+  }
+
+  .backButton {
+    width: 100%;
+    text-align: center;
+  }
 }

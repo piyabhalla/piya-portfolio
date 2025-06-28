@@ -1,61 +1,62 @@
 'use client';
 
+import React from 'react';
 import styles from './page.module.css';
 // @ts-ignore
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-const projects = [
-  {
-    title: 'Piyapp – Social App',
-    description: 'Post feed, profile editing, image uploads.',
-    github: 'https://github.com/piyabhalla/piyapp',
-  },
-  {
-    title: 'Air Canvas',
-    description: 'Draw in air using OpenCV hand tracking.',
-    github: 'https://github.com/piyabhalla/Air-Canvas',
-  },
-  {
-    title: 'Spam Detector',
-    description: 'Detects spam messages using NLP.',
-    github: 'https://github.com/piyabhalla/SMS-Spam-Detection',
-  },
-  {
-    title: 'Movie Recommender',
-    description: 'Suggests movies using cosine similarity.',
-    github: 'https://github.com/piyabhalla/Movie-Recommendation-System',
-  },
-  {
-    title: 'Connect4',
-    description: 'Classic Connect Four game with smart logic.',
-    github: 'https://github.com/piyabhalla/Connect4',
-  },
-  {
-    title: 'Car Price Predictor',
-    description: 'Predicts car sale prices using ML regression.',
-    github: 'https://github.com/piyabhalla/Car-Sales-Price-Prediction',
-  },
-];
-
 export default function ProjectsPage() {
+  const projects = [
+    {
+      title: 'AI Water Quality System',
+      description: 'An IoT-AI system using sensors to predict water contamination in real-time.',
+      link: 'https://github.com/piyabhalla/water-quality-monitoring',
+    },
+    {
+      title: 'Portfolio Website',
+      description: 'My personal portfolio website built with Next.js, Firebase, and vibrant aesthetics.',
+      link: 'https://github.com/piyabhalla/piya-portfolio',
+    },
+    {
+      title: 'Creative Ads Engine',
+      description: 'A data-driven creative engine to test hooks, scripts, and boost ad performance.',
+      link: 'https://github.com/piyabhalla/ad-engine',
+    },
+    {
+      title: 'Medical Chatbot',
+      description: 'Smart chatbot trained on BDS queries and dental patient FAQs.',
+      link: 'https://github.com/piyabhalla/medical-chatbot',
+    },
+    {
+      title: 'NLP Resume Parser',
+      description: 'Parses resumes and extracts skills and experience using NLP models.',
+      link: 'https://github.com/piyabhalla/nlp-resume-parser',
+    },
+    {
+      title: 'Facial Emotion Detector',
+      description: 'Detects user emotions in real-time using OpenCV and deep learning.',
+      link: 'https://github.com/piyabhalla/emotion-detector',
+    },
+  ];
+
   return (
     <main className={styles.main}>
-      <h1 className={styles.heading}>👾 My Projects 👾</h1>
+      <h1 className={styles.heading}>✨ My Projects</h1>
+
       <div className={styles.grid}>
         {projects.map((project, index) => (
           <motion.div
             key={index}
             className={styles.card}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-            viewport={{ once: true }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <a href={project.github} target="_blank" rel="noopener noreferrer">
-              GitHub →
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              View Project →
             </a>
           </motion.div>
         ))}

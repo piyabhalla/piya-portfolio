@@ -13,13 +13,7 @@ export default function ContactPage() {
       <h1 className={styles.heading}>📬 Contact Me</h1>
 
       <div className={styles.cardGrid}>
-        {/* Phone */}
-        <motion.div
-          className={styles.card}
-          whileInView={{ opacity: 1, scale: 1 }}
-          initial={{ opacity: 0, scale: 0.8 }}
-          transition={{ duration: 0.5 }}
-        >
+        <motion.div className={styles.card} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0.8 }} transition={{ duration: 0.5 }}>
           <a href="tel:+918146984010" target="_blank">
             <FaPhone className={styles.icon} />
             <h2>Phone</h2>
@@ -27,13 +21,7 @@ export default function ContactPage() {
           </a>
         </motion.div>
 
-        {/* Email */}
-        <motion.div
-          className={styles.card}
-          whileInView={{ opacity: 1, scale: 1 }}
-          initial={{ opacity: 0, scale: 0.8 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
+        <motion.div className={styles.card} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0.8 }} transition={{ duration: 0.5, delay: 0.1 }}>
           <a href="mailto:piyabhalla000@gmail.com" target="_blank">
             <FaEnvelope className={styles.icon} />
             <h2>Email</h2>
@@ -41,36 +29,16 @@ export default function ContactPage() {
           </a>
         </motion.div>
 
-        {/* GitHub */}
-        <motion.div
-          className={styles.card}
-          whileInView={{ opacity: 1, scale: 1 }}
-          initial={{ opacity: 0, scale: 0.8 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <a
-            href="https://github.com/piyabhalla/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <motion.div className={styles.card} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0.8 }} transition={{ duration: 0.5, delay: 0.2 }}>
+          <a href="https://github.com/piyabhalla/" target="_blank" rel="noopener noreferrer">
             <FaGithub className={styles.icon} />
             <h2>GitHub</h2>
             <p>@piyabhalla</p>
           </a>
         </motion.div>
 
-        {/* LinkedIn */}
-        <motion.div
-          className={styles.card}
-          whileInView={{ opacity: 1, scale: 1 }}
-          initial={{ opacity: 0, scale: 0.8 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <a
-            href="https://www.linkedin.com/in/piya-bhalla-b67903336?trk=contact-info"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <motion.div className={styles.card} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0.8 }} transition={{ duration: 0.5, delay: 0.3 }}>
+          <a href="https://www.linkedin.com/in/piya-bhalla-b67903336?trk=contact-info" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className={styles.icon} />
             <h2>LinkedIn</h2>
             <p>Piya Bhalla</p>
@@ -78,17 +46,10 @@ export default function ContactPage() {
         </motion.div>
       </div>
 
-      {/* 💌 Drop Me a Message Form */}
-      <motion.form
-        className={styles.form}
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: 50 }}
-        transition={{ duration: 0.6 }}
-        onSubmit={(e) => {
-          e.preventDefault();
-          alert('Message sent! (fake)');
-        }}
-      >
+      <motion.form className={styles.form} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={{ duration: 0.6 }} onSubmit={(e) => {
+        e.preventDefault();
+        alert('Message sent! (fake)');
+      }}>
         <h2 className={styles.formHeading}>💌 Drop Me a Message</h2>
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Your Email" required />
@@ -96,7 +57,6 @@ export default function ContactPage() {
         <button type="submit">Send ✨</button>
       </motion.form>
 
-      {/* Back to Home Button */}
       <Link href="/" className={styles.backButton}>
         ⬅ Back to Home
       </Link>

@@ -1,6 +1,6 @@
 .main {
   min-height: 100vh;
-  padding: 2rem;
+  padding: 2rem 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,35 +19,38 @@
 }
 
 .heading {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   background: linear-gradient(to right, #ff6ec7, #a67df0, #00d2ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .description {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   max-width: 600px;
   color: #444;
+  padding: 0 1rem;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   background: linear-gradient(45deg, #ff6ec7, #a67df0);
   color: white;
   font-weight: bold;
-  padding: 1rem 2.2rem;
+  padding: 1rem 2rem;
   border-radius: 12px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border: none;
   box-shadow: 0 0 12px rgba(255, 110, 199, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
+  width: fit-content;
 }
 
 .button:hover {
@@ -60,8 +63,8 @@
 }
 
 .backButton {
-  margin-top: 2.5rem;
-  padding: 0.9rem 2.2rem;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
   background: linear-gradient(to right, #89f7fe, #fbc2eb);
   color: #333;
   font-weight: bold;
@@ -69,11 +72,32 @@
   border-radius: 12px;
   transition: all 0.3s ease;
   box-shadow: 0 0 12px rgba(255, 110, 199, 0.5);
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .backButton:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px #89f7fe;
   color: #000;
+}
+
+/* 🌟 Mobile Adjustments */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.9rem 1.6rem;
+  }
+
+  .backButton {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.5rem;
+  }
 }
