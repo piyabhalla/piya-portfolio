@@ -9,10 +9,10 @@ export default function Home() {
   const sparkleCount = 20
 
   useEffect(() => {
-    const sparkles = document.querySelectorAll(.${styles.sparkle})
+    const sparkles = document.querySelectorAll(`.${styles.sparkle}`)
     sparkles.forEach((sparkle: any) => {
-      sparkle.style.left = ${Math.random() * 100}%
-      sparkle.style.top = ${Math.random() * 100}%
+      sparkle.style.left = `${Math.random() * 100}%`
+      sparkle.style.top = `${Math.random() * 100}%`
     })
   }, [])
 
