@@ -8,7 +8,6 @@
   background-size: 600% 600%;
   animation: neonFlow 12s ease infinite;
   font-family: 'Segoe UI', sans-serif;
-  overflow-x: hidden;
 }
 
 @keyframes neonFlow {
@@ -35,7 +34,6 @@
   width: 100%;
   max-width: 800px;
   margin-bottom: 3rem;
-  padding: 0 1rem;
 }
 
 @media (min-width: 640px) {
@@ -91,7 +89,6 @@
   box-shadow: 0 0 30px rgba(255, 182, 230, 0.3);
   border: 2px dashed #ffa9e0;
   backdrop-filter: blur(8px);
-  margin: 0 1rem;
 }
 
 .formHeading {
@@ -113,7 +110,6 @@
   background: #fff;
   color: #333;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-  width: 100%;
 }
 
 .form input:focus,
@@ -133,7 +129,6 @@
   box-shadow: 0 0 15px #ffcbf5;
   transition: all 0.3s ease;
   align-self: center;
-  width: fit-content;
 }
 
 .form button:hover {
@@ -162,6 +157,14 @@
 
 /* 🔻 Responsive Fixes */
 @media (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    padding: 1.5rem;
+  }
+
   .heading {
     font-size: 2rem;
   }
@@ -172,10 +175,6 @@
 
   .formHeading {
     font-size: 1.4rem;
-  }
-
-  .form {
-    padding: 1.5rem;
   }
 
   .form button,
