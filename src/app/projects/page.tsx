@@ -39,7 +39,7 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <main className={styles.main}>
-      <h1 className={styles.heading}>💖 My Projects 💖</h1>
+      <h1 className={styles.heading}> 🧠 My Projects 🧠 </h1>
       <div className={styles.grid}>
         {projects.map((project, index) => (
           <div key={index} className={styles.card}>
