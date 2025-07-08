@@ -1,16 +1,15 @@
 .main {
-  min-height: 100vh;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  padding: 2rem;
   background: linear-gradient(135deg, #ffe4ec, #e0f7fa, #e1e0ff);
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
-  color: #333;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
+  text-align: center;
 }
 
 @keyframes gradientShift {
@@ -20,78 +19,67 @@
 }
 
 .heading {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   font-weight: bold;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   background: linear-gradient(90deg, #ff6ec7, #a67df0, #00d2ff, #89f7fe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.grid {
+.rowsWrapper {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 1rem;
+  gap: 1.4rem;
+  flex: 1;
+  justify-content: center;
 }
 
 .row {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 1.4rem;
 }
 
 .card {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 18px;
-  box-shadow: 0 0 18px rgba(255, 182, 230, 0.2);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 14px rgba(255, 110, 199, 0.25);
+  width: 260px;
   border-left: 6px solid #ffb6f1;
-  width: 100%;
-  max-width: 350px;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 0 24px rgba(255, 110, 199, 0.35);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 110, 199, 0.4);
 }
 
 .card h2 {
-  font-size: 1.25rem;
-  color: #222;
-  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
 }
 
 .card p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.8rem;
 }
 
 .card a {
-  font-size: 0.95rem;
   font-weight: bold;
-  color: #6a11cb;
   text-decoration: none;
   background: #f1eaff;
-  padding: 8px 12px;
+  color: #6a11cb;
+  padding: 6px 10px;
   border-radius: 8px;
   display: inline-block;
-  transition: background 0.3s;
-}
-
-.card a:hover {
-  background: #e0d4ff;
 }
 
 .backButton {
-  margin-top: 3rem;
-  padding: 0.9rem 2.2rem;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
   background: linear-gradient(to right, #89f7fe, #fbc2eb);
   color: #333;
   font-weight: bold;
@@ -99,55 +87,26 @@
   border-radius: 12px;
   transition: all 0.3s ease;
   box-shadow: 0 0 12px rgba(255, 110, 199, 0.5);
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .backButton:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px #89f7fe;
-  color: #000;
 }
 
-/* 📱 Mobile Optimization */
+/* 📱 Mobile Responsive */
 @media (max-width: 768px) {
-  .heading {
-    font-size: 2.3rem;
-  }
-
   .row {
     flex-direction: column;
     align-items: center;
   }
 
   .card {
-    width: 100%;
+    width: 90%;
   }
-}
 
-@media (max-width: 480px) {
   .heading {
     font-size: 2rem;
-  }
-
-  .card {
-    padding: 1.2rem;
-  }
-
-  .card h2 {
-    font-size: 1rem;
-  }
-
-  .card p {
-    font-size: 0.9rem;
-  }
-
-  .card a {
-    font-size: 0.85rem;
-    padding: 6px 10px;
-  }
-
-  .backButton {
-    font-size: 0.95rem;
-    padding: 0.7rem 1.5rem;
   }
 }
