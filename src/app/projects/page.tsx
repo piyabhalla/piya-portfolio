@@ -4,6 +4,12 @@ import styles from './page.module.css';
 import Link from 'next/link';
 
 const projects = [
+   {
+    title: "Neuramini – AI Powered Chatbot Platform",
+    description:
+      "Full-stack chatbot with OpenRouter (LLMs) & Hugging Face ViT for image classification.",
+    github: "https://github.com/piyabhalla/neuramini",
+  },
   {
     title: "Piyapp – Social App",
     description: "Post feed, profile editing, image uploads.",
@@ -52,7 +58,6 @@ export default function ProjectsPage() {
         ))}
       </div>
 
-      {/* ✅ Back to Home Button */}
       <Link href="/" className={styles.backButton}>
         ⬅ Back to Home
       </Link>
